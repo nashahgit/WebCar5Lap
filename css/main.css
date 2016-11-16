@@ -1,0 +1,312 @@
+.mynavbar{
+}
+.navbar-default {
+    background : none;
+    border-color: rgba(231, 231, 231, 0);
+}
+.navbar {
+    min-height: 100px;
+    width: 100%;
+    padding: 2%;
+}
+.navbar>.container-fluid .navbar-brand {
+    margin-left: 0px;
+}
+.navbar-right {
+  float: right!important;
+  margin-right: 0px;
+}
+.navbar-brand {
+    float: left;
+    width: 100%;
+    height: 55px;
+    padding: 0px;
+    font-size: 18px;
+    line-height: 20px;
+}
+.navbar-default .navbar-toggle {
+  z-index: 99;
+}
+
+.navbar-brand img {
+  height: 85%;
+  /*-webkit-filter: drop-shadow( 0px 0px 1px #fff );
+  -moz-filter: drop-shadow( 0px 0px 1px #fff );
+  -ms-filter: drop-shadow( 0px 0px 1px #fff );
+  filter: drop-shadow( 0px 0px 1px #fff );*/
+}
+
+.navbar ul li{
+  background-color: #7fbb00 ;/* #0b0056 and #ffffff */
+  margin-right: 15px;
+  border-radius: 2px;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+}
+.navbar ul li.active {
+  background-color: #000080;
+}
+.navbar-default .navbar-nav>li>a {
+  color:  #ffffff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.navbar-default .navbar-nav>.active>a {
+  color: rgb(255, 249, 249);
+  background-color: rgba(231, 231, 231, 0);
+}
+.navbar-default .navbar-nav>.active>a:hover {
+    color: #ffffff;
+    background-color: rgba(231, 231, 231, 0);
+}
+#distant {
+  min-height: 100px;
+}
+#jumbo{
+  height: 100vh;
+  background-image: url(../image/bg_rs.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.trawler{
+  order:2;
+  height: 75vh;
+  width: 100%;
+  background-color: black;
+  opacity: .5;
+  position: relative;
+  border-radius: 4px;
+  top: 100px;
+  margin-left: 20px;
+  /*overflow-y: scroll;*/
+}
+
+.tagline{
+  order:1;
+  display: table;
+  width: 100%; 
+  height: 100vh;
+}
+.tagline span{
+  display: table-cell;
+  vertical-align: middle;
+}
+.tagline span h1 {
+  font-size: 54px;
+  font-weight: 600;
+  text-align: center;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  text-shadow: 2px 2px 15px black;
+}
+
+#da {
+  background: #43cea2; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #43cea2 , #185a9d); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #43cea2 , #185a9d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#da h1{
+  font-size: 54px;
+  text-align: center;
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+  position: relative;
+  top: 100px;
+}
+#da p{
+  position: relative;
+  margin-top: 130px;
+  margin-bottom: 50px;
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 30px;
+  padding: 0 50px;
+  line-height: 1.5;
+  text-align: left;
+}
+.right_of_abtus {
+  height: 100%;
+  text-align: center;  
+  font: 0/0 a;    
+}
+.right_of_abtus:before {
+  content: ' ';
+  display: inline-block;
+  vertical-align: middle;  
+  height: 100%;
+}
+.right_of_abtus img{
+   display: inline-block;
+   vertical-align: middle;  /* vertical alignment of the inline element */
+   font: 16px/1 Arial sans-serif;        /* <-- reset the font property */
+   width: 100%;
+   margin-top: 100px;
+}
+.adv{
+  background-image: url(../image/adv_bg_rs_tint.png);
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 35px;
+  /*background: #43cea2; /* fallback for old browsers */
+  /*background: -webkit-linear-gradient(to left, #7fbb00 , #000080); /* Chrome 10-25, Safari 5.1-6 */
+  /*background: linear-gradient(to left, #7fbb00 , #000080); /* W3*/C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* .pro_head{
+  position: relative;
+ 
+} */
+.adv h1 {
+  font-size: 54px;
+  text-align: center;
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin-top: 100px;
+  /*margin-bottom: 30px;*/
+}
+.adv .adv_list {
+  margin-top: 50px;
+}
+.pros {
+  margin-bottom: 50px; 
+}
+.pros p {
+  color: #ffffff;
+  font-family: 'Lato', sans-serif;
+  font-size: 30px;
+  text-align: center;
+  text-shadow: 0px 0px 4px black;
+  line-height: 1;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+.pros p::before {
+  content: '\02758';
+  font-size: 24px;
+  width: 20px;
+  height: 40px;
+  background-color: red;
+  color: red;
+}
+
+#partners{
+  /*height: 100vh;*/
+  /*background-image: url(bg3.jpeg);*/
+  /*background-position: center;*/
+  /*background-size: cover;*/
+  background: #43cea2; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #43cea2 , #185a9d); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #43cea2 , #185a9d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  top: 100px;
+  padding-bottom: 40px;
+}
+#partners > h1{
+  font-size: 54px;
+  text-align: center;
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-shadow: 4px 4px 10px black;
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+.partner-col {
+  width: 100%;
+  height: 60px;
+  padding: 10px 0px;
+  background-color: #ffffff;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  /*margin: 0px 10px 20px 10px; */
+  margin-bottom: 50px;
+}
+.partner-col img {
+  margin: 0 auto;
+}
+
+#footer{
+  background-color: #7fbb00;
+  width: 100%;
+  position: relative;;
+  padding: 20px;
+}
+
+@media only screen and (max-device-width: 480px) {
+
+}
+
+@media (max-width:767px) { 
+  .navbar-brand img {
+    /*margin: 0 auto;*/
+    height: 70%;
+  }
+  .container-fluid>.navbar-header {
+    margin-right: 0px;
+    margin-left: 0px; 
+  }
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+  }
+  .navbar>.container-fluid .navbar-brand {
+    position: absolute;
+    margin-top: 8px;
+  }
+  .navbar-default .navbar-collapse {
+    border-color: rgba(231, 231, 231, 0);
+    border-top: 0px solid transparent;
+    -webkit-box-shadow: inset 0 0px 0 rgba(255,255,255,.1);
+    box-shadow: inset 0 0px 0 rgba(255,255,255,.1);
+  }
+  .navbar ul li {
+    margin-bottom: 2px;
+  }
+  .trawler{
+      margin-left: 0px;
+      top: 80px;
+  }
+  .navbar-default .navbar-toggle {
+    border: 2px solid #ffffff;
+    border-radius: 0px;
+  }
+  .tagline{
+    display: none;
+    height: 6vh;
+  }
+  #da h1{ 
+    top: 100px;
+  }
+  #da p {
+    margin-top: 110px;
+    font-size: 24px;
+    line-height: 1;
+    text-align: left;
+  }
+  .pro_head h1 {
+    font-size: 30px;
+    font-weight: 600;
+    text-shadow: 8px 8px 15px black;
+  }
+  .pros {
+    margin-bottom: 5px;
+  }
+  .pros p {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px)  { 
+    .navbar-brand img {
+      height: 70%;
+    }
+    .trawler{
+      margin-left: 0px;
+      top: 80px;
+    }
+    .tagline{
+      display: none;
+      height: 6vh;
+    }
+}
+
+
+
