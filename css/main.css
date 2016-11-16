@@ -7,7 +7,7 @@
 .navbar {
     min-height: 100px;
     width: 100%;
-    padding: 2%;
+    padding: 1.5%;
 }
 .navbar>.container-fluid .navbar-brand {
     margin-left: 0px;
@@ -19,7 +19,7 @@
 .navbar-brand {
     float: left;
     width: 100%;
-    height: 55px;
+    height: 50px;
     padding: 0px;
     font-size: 18px;
     line-height: 20px;
@@ -29,7 +29,7 @@
 }
 
 .navbar-brand img {
-  height: 85%;
+  height: 100%;
   /*-webkit-filter: drop-shadow( 0px 0px 1px #fff );
   -moz-filter: drop-shadow( 0px 0px 1px #fff );
   -ms-filter: drop-shadow( 0px 0px 1px #fff );
@@ -38,10 +38,10 @@
 
 .navbar ul li{
   background-color: #7fbb00 ;/* #0b0056 and #ffffff */
-  margin-right: 15px;
+  margin-right: 10px;
   border-radius: 2px;
   font-family: 'Lato', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
 }
 .navbar ul li.active {
   background-color: #000080;
@@ -70,7 +70,6 @@
 }
 
 .trawler{
-  order:2;
   height: 75vh;
   width: 100%;
   background-color: black;
@@ -83,14 +82,13 @@
 }
 
 .tagline{
-  order:1;
   display: table;
   width: 100%; 
-  height: 100vh;
+  height: 50vh;
 }
 .tagline span{
   display: table-cell;
-  vertical-align: middle;
+  vertical-align : bottom ; 
 }
 .tagline span h1 {
   font-size: 54px;
@@ -99,6 +97,9 @@
   color: white;
   font-family: 'Lato', sans-serif;
   text-shadow: 2px 2px 15px black;
+}
+.app_badge {
+  text-align: center;
 }
 
 #da {
@@ -113,11 +114,11 @@
   color: white;
   font-family: 'Source Sans Pro', sans-serif;
   position: relative;
-  top: 100px;
+  top: 80px;
 }
 #da p{
   position: relative;
-  margin-top: 130px;
+  margin-top: 100px;
   margin-bottom: 50px;
   color: white;
   font-family: 'Source Sans Pro', sans-serif;
@@ -144,8 +145,8 @@
    width: 100%;
    margin-top: 100px;
 }
-.adv{
-  background-image: url(../image/adv_bg_rs_tint.png);
+#adv{
+  background-image: url(../image/bg_2.jpg);
   background-size: cover;
   background-position: center;
   padding-bottom: 35px;
@@ -158,15 +159,16 @@
   position: relative;
  
 } */
-.adv h1 {
+#adv h1 {
   font-size: 54px;
   text-align: center;
   color: white;
   font-family: 'Source Sans Pro', sans-serif;
+  text-shadow: 4px 4px 10px black;
   margin-top: 100px;
   /*margin-bottom: 30px;*/
 }
-.adv .adv_list {
+#adv .adv_list {
   margin-top: 50px;
 }
 .pros {
@@ -174,10 +176,10 @@
 }
 .pros p {
   color: #ffffff;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 30px;
   text-align: center;
-  text-shadow: 0px 0px 4px black;
+  text-shadow: 4px 4px 10px black;
   line-height: 1;
   margin-bottom: 40px;
   text-transform: uppercase;
@@ -202,7 +204,7 @@
   top: 100px;
   padding-bottom: 40px;
 }
-#partners > h1{
+#partners h1{
   font-size: 54px;
   text-align: center;
   color: white;
@@ -223,12 +225,17 @@
 .partner-col img {
   margin: 0 auto;
 }
-
+.partner-col-parent {
+  padding: 0px 4% 0px 4%;
+}
 #footer{
-  background-color: #7fbb00;
+  background-color: #000080;
   width: 100%;
+  min-height: 100px;
   position: relative;;
   padding: 20px;
+  box-shadow : rgba(0, 0, 0, 0.74902) 0px 1px 5px 0px;
+  box-shadow: rgba(0, 0, 0, 0.74902) 0px 1px 5px 1px;
 }
 
 @media only screen and (max-device-width: 480px) {
@@ -238,7 +245,7 @@
 @media (max-width:767px) { 
   .navbar-brand img {
     /*margin: 0 auto;*/
-    height: 70%;
+    height: 85%;
   }
   .container-fluid>.navbar-header {
     margin-right: 0px;
@@ -272,6 +279,9 @@
     display: none;
     height: 6vh;
   }
+  .app_badge {
+    display: none;
+  }
   #da h1{ 
     top: 100px;
   }
@@ -292,11 +302,23 @@
   .pros p {
     font-size: 20px;
   }
+  #da h1{
+    font-size: 40px;
+  }
+  #adv h1 {
+    font-size: 40px;
+  }
+  #partners h1 {
+    font-size: 40px;
+  }
+  .right_of_abtus img {
+    margin-top: 0px;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px)  { 
     .navbar-brand img {
-      height: 70%;
+      height: 85%;
     }
     .trawler{
       margin-left: 0px;
@@ -305,6 +327,12 @@
     .tagline{
       display: none;
       height: 6vh;
+    }
+    .right_of_abtus img {
+      margin-top: 0px;
+    }
+    .app_badge {
+      display: none;
     }
 }
 
