@@ -17,7 +17,63 @@
     <link rel="stylesheet" href="css/main.css" media="screen" title="no title">
     <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="js/scrollreveal.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript">
+      window.onload = function() {
+        $("#loader").fadeOut("slow");
+
+        var key_val = {
+          "BH" : {"country":"BH","currency":"BHD","language":"AR"},
+          "EG" : {"country":"EG","currency":"EGP","language":"AR"},
+          "JO" : {"country":"JO","currency":"JOD","language":"AR"},
+          "KW" : {"country":"KW","currency":"KWD","language":"AR"},
+          "LB" : {"country":"LB","currency":"LBP","language":"AR"},
+          "LY" : {"country":"LY","currency":"LYD","language":"AR"},
+          "MA" : {"country":"MA","currency":"MAD","language":"AR"},
+          "OM" : {"country":"OM","currency":"OMR","language":"AR"},
+          "QA" : {"country":"QA","currency":"QAR","language":"AR"},
+          "SA" : {"country":"SA","currency":"SAR","language":"AR"},
+          "SY" : {"country":"SY","currency":"SYP","language":"AR"},
+          "TN" : {"country":"TN","currency":"TND","language":"AR"},
+          "AE" : {"country":"AE","currency":"AED","language":"AR"},
+          "YE" : {"country":"YE","currency":"ZMW","language":"AR"},
+          "IN" : {"country":"IN","currency":"INR","language":"EN"}
+        }
+
+        var country_code;
+        var lang_code;
+        var curr_code;
+
+        function get_country_code() {
+            $.getJSON("http://freegeoip.net/json/", function(data) {
+                country_code = data.country_code;
+                func_build();
+            });
+        }
+
+        function func_build() {
+          $.each(key_val, function(i, j) {
+              if(key_val[i].country === country_code) {
+                  // console.log(key_val[i].currency);
+                curr_code = key_val[i].currency;
+                lang_code = key_val[i].language;
+                $('#curr_select option[value="Select-Curr"]').prop("selected",false);
+                $('#lang_select option[value="Select-Lang"]').prop("selected",false);
+
+                $('#curr_select option[value=' + curr_code + ']').prop("selected",true);
+                $('#lang_select option[value=' + lang_code + ']').prop("selected",true);
+              }
+              else {
+                $('#curr_select option[value="USD"]').prop("selected",true);
+                $('#lang_select option[value="EN"]').prop("selected",true);
+              }
+          }); 
+        }
+
+        get_country_code();
+      }
+    </script>
   </head>
   <body data-spy="scroll">
     <div id="wrap">
@@ -44,11 +100,272 @@
       </nav>
       <div class="container-fluid" id="jumbo">
         <div class="row">
-          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
             <div class="trawler">
+              <div id="curr_lang">
+                <div class="container-fluid lang_curr_select">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <form>
+                        <select required id="lang_select">
+                            <option value="Select-Lang" disabled selected>Select Language..</option>
+                            <option value="AR" >Arabic</option>
+                            <option value="EN-US">American English</option>
+                            <option value="EN">English</option>
+                            <option value="ZH-TW">Traditional Chinese</option>
+                            <option value="ZH-HK">Chinese (Hong Kong)</option>
+                            <option value="BR">Portuguese (Brazil)</option>
+                            <option value="PT">Portuguese</option>
+                            <option value="MX">Spanish (Mexico)</option>
+                            <option value="ES">Spanish</option>
+                            <option value="LV">Latvian</option>
+                            <option value="LT">Lithuanian</option>
+                            <option value="TH">Thai</option>
+                            <option value="HR">Croatian</option>
+                            <option value="ZH">Simplified Chinese</option>
+                            <option value="RO">Romanian</option>
+                            <option value="TL">Filipino</option>
+                            <option value="CA">Catalan</option>
+                            <option value="VI">Vietnamese</option>
+                            <option value="TR">Turkish</option>
+                            <option value="NO">Norwegian</option>
+                            <option value="HU">Hungarian</option>
+                            <option value="BG">Bulgarian</option>
+                            <option value="FR">French</option>
+                            <option value="SV">Swedish</option>
+                            <option value="MK">Macedonian </option>
+                            <option value="FO">Faroese</option>
+                            <option value="ID">Indonesian</option>
+                            <option value="DE">German</option>
+                            <option value="FL">Flemish</option>
+                            <option value="FI">Finnish</option>
+                            <option value="KO">Korean</option>
+                            <option value="CS">Czech</option>
+                            <option value="IS">Icelandic</option>
+                            <option value="UK">Ukrainian</option>
+                            <option value="DA">Danish</option>
+                            <option value="IT">Italian</option>
+                            <option value="SR">Serbian</option>
+                            <option value="MS">Malay</option>
+                            <option value="PL">Polish</option>
+                            <option value="CH">Swiss</option>
+                            <option value="RU">Russian</option>
+                            <option value="ET">Estonian</option>
+                            <option value="NL">Dutch</option>
+                            <option value="JA">Japanese</option>
+                            <option value="EL">Greek</option>
+                        </select>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="container-fluid lang_curr_select">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <form>
+                        <select required id="curr_select">
+                            <option value="Select-Curr" disabled selected>Select Currency..</option>
+                            <option value="AED">AED [AED]</option>
+                            <option value="BHD">BHD [BHD]</option>
+                            <option value="EGP">EGP [EGP]</option>
+                            <option value="JOD">JOD [JOD]</option>
+                            <option value="KWD">KWD [KWD]</option>
+                            <option value="LBP">LBP [LBP]</option>
+                            <option value="OMR">OMR [﷼]</option>
+                            <option value="SAR">SAR [﷼]</option>
+                            <option value="QAR">QAR [﷼]</option>
+                            <option value="EUR">EUR [€]</option>
+                            <option value="GBP">GBP [£]</option>
+                            <option value="USD">USD [$]</option>
+                            <option value="ARS">ARS [$]</option>
+                            <option value="BDT">BDT [Tk]</option>
+                            <option value="BGN">BGN [Лв]</option>
+                            <option value="BRL">BRL [R$]</option>
+                            <option value="CAD">CAD [$]</option>
+                            <option value="CHF">CHF [CHF]</option>
+                            <option value="CLP">CLP [$]</option>
+                            <option value="CNY">CNY [¥]</option>
+                            <option value="CRC">CRC [₡]</option>
+                            <option value="CZK">CZK [Kč]</option>
+                            <option value="DKK">DKK [kr]</option>
+                            <option value="FJD">FJD [$]</option>
+                            <option value="AUD">AUD [$]</option>
+                            <option value="GTQ">GTQ [Q]</option>
+                            <option value="HKD">HKD [HK$]</option>
+                            <option value="HUF">HUF [Ft]</option>
+                            <option value="IDR">IDR [Rp]</option>
+                            <option value="ILS">ILS [₪]</option>
+                            <option value="INR">INR [₨]</option>
+                            <option value="ISK">ISK [kr]</option>
+                            <option value="JPY">JPY [¥]</option>
+                            <option value="KES">KES [KSh]</option>
+                            <option value="KRW">KRW [₩]</option>
+                            <option value="LKR">LKR [₨]</option>
+                            <option value="MKD">MKD [ден]</option>
+                            <option value="MMK">MMK [K]</option>
+                            <option value="MOP">MOP [MOP$]</option>
+                            <option value="MXN">MXN [$]</option>
+                            <option value="MYR">MYR [RM]</option>
+                            <option value="NAD">NAD [$]</option>
+                            <option value="NGN">NGN [₦]</option>
+                            <option value="NOK">NOK [kr]</option>
+                            <option value="NZD">NZD [$]</option>
+                            <option value="PHP">PHP [₱]</option>
+                            <option value="PKR">PKR [₨]</option>
+                            <option value="PLN">PLN [zł]</option>
+                            <option value="RON">RON [Lei]</option>
+                            <option value="RSD">RSD [PCД]</option>
+                            <option value="RUB">RUB [₽]</option>
+                            <option value="SEK">SEK [kr]</option>
+                            <option value="SGD">SGD [$]</option>
+                            <option value="THB">THB [฿]</option>
+                            <option value="TRY">TRY [₺]</option>
+                            <option value="TWD">TWD [NT$]</option>
+                            <option value="TZS">TZS [TZS]</option>
+                            <option value="UAH">UAH [₴]</option>
+                            <option value="AZN">AZN [ман]</option>
+                            <option value="VND">VND [₫]</option>
+                            <option value="ZAR">ZAR [R]</option>
+                        </select>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="container-fluid curr_lang_btn">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <button type="button" id="cur_lan_btn" class="btn btn-default">GO</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="abe_ABE">
+                <div id="pls_wait">Please Wait...</div>
+
+                <style type="text/css">
+                  #ct_s1_search_button {
+                      background-color: rgba(11, 98, 81, 0) !important;
+                      border-color: #FFFFFF;
+                  }
+                </style>
+                <noscript>YOUR BROWSER DOES NOT SUPPORT JAVASCRIPT</noscript>
+              </div>
+              <script type="text/javascript">
+                    var currency;
+                    var language;
+
+                    $("#cur_lan_btn").click(function() {
+                      var lang = document.getElementById("lang_select");
+                      var language = lang.options[lang.selectedIndex].value;
+                      var curr = document.getElementById("curr_select");
+                      var currency = curr.options[curr.selectedIndex].value;
+                      $(this).css({'background-color':'#ffffff','color':'#0971b6'});
+                      main_func(language, currency);
+                      $("#curr_lang").css("display", "none");
+                      $("#pls_wait").css({'display': 'block'})
+                    });
+
+                    var CT = {
+                      ABE: {
+                        Settings: {
+                            events: [
+                            {
+                              ready: function() {
+                                // console.log("Getting ready");
+                              }
+                            },
+                            {
+                              step1: function(e, obj, $) {
+                                // console.log("I am in step 1");
+                                $("#pls_wait").css({'display': 'none'})
+                                switch (obj.process) {
+                                  case 'start':
+                                         // console.log("Start");
+                                          break;
+                                  case 'prerender':
+                                          // console.log("prerender");
+                                          break;
+                                  case 'render':
+                                          // console.log("render");
+                                          break;
+                                  case 'postrender':
+                                          // console.log("postrender");
+                                          break;
+                                  case 'success':
+                                          // console.log("success"); 
+                                          break;
+                                }
+                                  // var myElement = document.querySelector("#loader");
+                                  // myElement.style.display = "none";
+                              }
+                            },
+                            {
+                              step2: function(e, obj, $) {
+                                // console.log("I am in step 2");
+                                switch (obj.process) {
+                                  case 'start':
+                                      $(".trawler").css({'padding-top':'0px'});
+                                      // Do something...
+                                      break;
+                                  case 'startavail':
+                                      // Do something...
+                                      break;
+                                  case 'render':
+                                      break;
+                                  case 'success':
+                                      // Do something...
+                                      break;
+                                  case 'progressbar':
+                                      // Do something...
+                                      break;
+                                  case 'nocar':
+                                      // Do something...
+                                      break;
+                                }  
+                              }
+                            }
+                          ],
+                          proxyURL: 'otaproxy.php',
+                          clientID: '675803',
+                          // templateLayout: {
+                          //   breadcrumbs: true,
+                          //   // css: 'theme.css'
+                          // },
+                          customStyles: [
+                            {
+                              style_name: "myStyle.css",
+                              style_path: "./css/",
+                            } 
+                          ],
+                          // currency: currency,
+                          // language: language,
+                          // residenceID: 'IE',
+                          theme:  {
+                            primary: '#000080', // e.g #0000FF
+                            secondary: '#7fbb00', // e.g #FF0000
+                            complimentary: '#FFFFFF' // e.g #000000 #0b6251
+                          }
+                        }
+                      }
+                    };
+             
+                    function main_func(language, currency) {
+                      CT.ABE.Settings.version = '4.0';
+                      CT.ABE.Settings.currency = currency;
+                      CT.ABE.Settings.language = language;
+
+                      var cts = document.createElement('script'); cts.type = 'text/javascript'; cts.async = true;
+                      cts.src = '//ajaxgeo.cartrawler.com/abe' + CT.ABE.Settings.version + '/ct_loader.js?' + new Date().getTime();
+                      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(cts, s);
+                    }
+           
+                    // main_func();
+              </script>
             </div>
           </div>
-          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
             <div class="row">
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="tagline">
@@ -75,8 +392,8 @@
         
         <div class="row">
           <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-            <h1><span>Who We Are</span></h1>
-            <p>
+            <h1 class="da_head"><span>Who We Are</span></h1>
+            <p class="da_para">
               LAP 5 Rent A Car Middle East is the region's most responsive car rental aggregator. Working with the best car rental companies regionally, we offer you the perfect rental at the best price at the most convenient locations from the most respected companies. Compare and book car rental offers from the best rated companies. We trawl the best car rental deals for you so you're only a click away from the perfect rental experience.
             </p>
           </div>
@@ -88,24 +405,22 @@
         </div>
       </div>  
       <div class="container-fluid" id="adv">
-        <h1>The Lap 5 Advantage</h1>
+        <h1 class="adv_head">The Lap 5 Advantage</h1>
         <div class="row adv_list">
-          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 pros">
-            <p>Free to book, free to cancel</p>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pros">
+            <p class="adv_p1"><span>Free to book, free to cancel</span></p>
          
-            <p>Hundreds of locations</p>
+            <p class="adv_p2"><span>Hundreds of locations</span></p>
          
-            <p>Thousands of cars to choose</p>
+            <p class="adv_p3"><span>Thousands of cars to choose</span></p>
        
-            <p>Best prices</p>
-          </div>
-          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 pros">
+            <p class="adv_p4"><span>Best prices</span></p>
 
-            <p>Respected rental providers</p>
+            <p class="adv_p5"><span>Respected rental providers</span></p>
 
-            <p>Hassle-free comparison and booking</p>
+            <p class="adv_p6"><span>Hassle-free comparison and booking</span></p>
 
-            <p>Long-term and short-term leases</p>
+            <p class="adv_p7"><span>Long-term and short-term leases</span></p>
           </div>
         </div>
       </div>

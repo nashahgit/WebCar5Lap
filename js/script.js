@@ -23,21 +23,10 @@
 	  });
 	});
 
-	/* code for hiding and revealing the BG for navigation */
-	// window.onscroll = function(ev) {
-	//     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-	//     	// $('.navbar').fadeOut('slow');
-	//     	$('.navbar-default').css({'background-color' : '#3a91eb'});
-	//     }
-	//     else {
-	//     	$('.navbar-default').css({'background-color' : '#ffffff'});
-	//     }
-	// };
-
 	$(function(){
 		$(window).scroll(function(){
 			// var aTop = $('#header').height();
-			if($(this).scrollTop()>=200){
+			if($(this).scrollTop()>=100){
 				// $(".small-owl").fadeIn('slow');
 				$('.navbar-default').css({'background-color' : '#7fbb00'}).fadeIn('slow');
 				$('.navbar-brand').css({'height' : '40px' , '-webkit-transition' : '0.5s', 'transition' : '0.5s'});
@@ -55,5 +44,31 @@
 		});
 	});
 
+	/* To set the trawler window height*/
+	var windowHeight = $(window).height();
+	var navbarHeight = $(".navbar").height();
+	var setHeight = windowHeight - 100;
+	$(".trawler").height(setHeight);
+	$(".trawler").css({'padding-top':'100px'});
 
+	/* Scroll reveal code*/
+	window.sr = ScrollReveal({duration: 300, opacity: 0, reset: false});
+	// sr.reveal('.trawler',{origin: 'left', distance: '100px', delay:400});
+	sr.reveal('.tagline',{origin: 'right', distance: '100px', delay:600});
+	sr.reveal('.app_badge',{origin: 'right', distance: '100px', delay:800});
+
+	sr.reveal('.da_head',{origin: 'bottom', distance: '100px', delay:400});
+	sr.reveal('.da_para',{origin: 'bottom', distance: '100px', delay:400});
+	sr.reveal('.right_of_abtus',{origin: 'bottom', distance: '100px', delay:600});
+
+	sr.reveal('.adv_head',{origin: 'bottom', distance: '100px', delay:400});
+	sr.reveal('.adv_p1',{origin: 'right', distance: '100px', delay:500});
+	sr.reveal('.adv_p2',{origin: 'right', distance: '100px', delay:600});
+	sr.reveal('.adv_p3',{origin: 'right', distance: '100px', delay:700});
+	sr.reveal('.adv_p4',{origin: 'right', distance: '100px', delay:800});
+	sr.reveal('.adv_p5',{origin: 'right', distance: '100px', delay:900});
+	sr.reveal('.adv_p6',{origin: 'right', distance: '100px', delay:1000});
+	sr.reveal('.adv_p7',{origin: 'right', distance: '100px', delay:1100});
+
+	sr.reveal('.partner-col',{origin: 'right', distance: '100px', delay:500});
 });
