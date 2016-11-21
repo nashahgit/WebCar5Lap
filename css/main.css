@@ -1,7 +1,7 @@
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
 body {
   overflow-x: hidden;
 }
-
 body::-webkit-scrollbar {
     width: 1em;
 }
@@ -14,14 +14,91 @@ body::-webkit-scrollbar-thumb {
 }
 .mynavbar{
 }
+#share_button {
+  position: fixed;
+  z-index: 9;
+}
+#share_button img {
+  max-width: 100%;
+  max-height: 100%;
+}
+#share_button #fb{
+  position: fixed;
+  display: none;
+  right: 75px;
+  bottom: 95px;
+  width: 55px;
+  height: 55px;
+  padding: 5px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+#share_button #google{
+  position: fixed;
+  display: none;
+  right: 15px;
+  bottom: 95px;
+  width: 55px;
+  height: 55px;
+  padding: 5px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+#share_button #twitter{
+  position: fixed;
+  display: none;
+  right: 75px;
+  bottom: 35px;
+  width: 55px;
+  height: 55px;
+  padding: 5px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+#share_button #share{
+  position: fixed;
+  right: 15px;
+  bottom: 35px;
+  width: 55px;
+  height: 55px;
+  padding: 5px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.blue_tooltip + .tooltip > .tooltip-inner {
+  background-color: #000080;
+  width: 100px;
+}
+.lang_switch {
+  position: fixed;
+  bottom: 30vh;
+  background-color: red;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  right: 0px;
+  color: #ffffff;
+  padding: 5px 9px;
+  /*padding-left: ;*/
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  font-family: 'Droid Arabic Kufi', serif;
+  font-size: 20px;
+  /*font-weight: 600;*/
+  /*font-family: 'Lato', sans-serif;*/
+  z-index: 9;
+}
 .navbar-default {
-    background : none;
+    background-color: #ffffff;
     border-color: rgba(231, 231, 231, 0);
 }
 .navbar {
-    /*min-height: 100px;*/
+    min-height: 50px;
+    box-shadow : rgba(0, 0, 0, 0.74902) 0px 1px 5px 0px;
     width: 100%;
-    padding: 1.5%;
+    padding: 1%;
 }
 .navbar>.container-fluid .navbar-brand {
     margin-left: 0px;
@@ -104,6 +181,15 @@ body::-webkit-scrollbar-thumb {
   background-color: #000080;
   outline: 1px solid #7fbb00;
 }
+#pls_wait {
+  /*position: absolute;*/
+  margin-top: 75px;
+  display: none;
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+}
 .tagline{
   display: table;
   width: 100%; 
@@ -119,16 +205,17 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
   color: white;
   font-family: 'Lato', sans-serif;
-  text-shadow: 2px 2px 15px black;
+  text-shadow: 0px 0px 10px black;
 }
 .app_badge {
   text-align: center;
 }
 
 #da {
-  background: #43cea2; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #43cea2 , #185a9d); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #43cea2 , #185a9d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-color: #7fbb00;
+  /*background: #43cea2; /* fallback for old browsers */
+  /*background: -webkit-linear-gradient(to left, #43cea2 , #185a9d);  Chrome 10-25, Safari 5.1-6 */
+  /*background: linear-gradient(to left, #43cea2 , #185a9d);  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 #da h1{
@@ -187,7 +274,7 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
   color: white;
   font-family: 'Source Sans Pro', sans-serif;
-  text-shadow: 4px 4px 10px black;
+  text-shadow: 0px 0px 10px black;
   margin-top: 85px;
   /*margin-bottom: 30px;*/
 }
@@ -225,9 +312,10 @@ body::-webkit-scrollbar-thumb {
   /*background-image: url(bg3.jpeg);*/
   /*background-position: center;*/
   /*background-size: cover;*/
-  background: #43cea2; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #43cea2 , #185a9d); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #43cea2 , #185a9d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-color: #7fbb00;
+  /*background: #43cea2;  fallback for old browsers */
+  /*background: -webkit-linear-gradient(to left, #43cea2 , #185a9d); /* Chrome 10-25, Safari 5.1-6 */
+  /*background: linear-gradient(to left, #43cea2 , #185a9d);  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   top: 100px;
   padding-bottom: 40px;
 }
@@ -236,7 +324,7 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
   color: white;
   font-family: 'Source Sans Pro', sans-serif;
-  text-shadow: 4px 4px 10px black;
+  text-shadow: 0px 0px 10px black;
   margin-top: 80px;
   margin-bottom: 40px;
 }
@@ -297,6 +385,10 @@ body::-webkit-scrollbar-thumb {
 #curr_lang {
   /*margin-top: 50px;*/
 }
+#curr_lang p{
+  color: #ffffff;
+  text-align: center;
+}
 .lang_curr_select select option{
   color: #454545;
 }
@@ -324,6 +416,19 @@ body::-webkit-scrollbar-thumb {
   z-index: 10;
   display: none;
 }
+.copyright {
+    text-align: center;
+    color: #ffffff;
+}
+.footer_app_badge {
+  text-align: center;
+}
+#apple_badge {
+  width: 16%
+}
+#android_badge {
+  width: 18%;
+}
 
 @media only screen and (max-device-width: 480px) {
 
@@ -339,7 +444,7 @@ body::-webkit-scrollbar-thumb {
     margin-left: 0px; 
   }
   .navbar-default .navbar-toggle .icon-bar {
-    background-color: #fff;
+    background-color: #000080;
   }
   .navbar>.container-fluid .navbar-brand {
     position: absolute;
@@ -359,7 +464,7 @@ body::-webkit-scrollbar-thumb {
       /*top: 80px;*/
   }
   .navbar-default .navbar-toggle {
-    border: 2px solid #ffffff;
+    border: 2px solid #000080;
     border-radius: 0px;
   }
   .tagline{
@@ -381,7 +486,7 @@ body::-webkit-scrollbar-thumb {
   .pro_head h1 {
     font-size: 30px;
     font-weight: 600;
-    text-shadow: 8px 8px 15px black;
+    text-shadow: 0px 0px 10px black;
   }
   .pros {
     margin-bottom: 5px;
@@ -401,8 +506,18 @@ body::-webkit-scrollbar-thumb {
   .right_of_abtus img {
     margin-top: 0px;
   }
-  .pros {
-    
+  .trawler_col {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .footer_app_badge {
+    text-align: center;
+  }
+  #apple_badge {
+    width: 30%
+  }
+  #android_badge {
+    width: 35%;
   }
 }
 

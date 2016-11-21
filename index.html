@@ -70,13 +70,26 @@
               }
           }); 
         }
-
         get_country_code();
       }
     </script>
   </head>
   <body data-spy="scroll">
     <div id="wrap">
+      <div id="share_button">
+        <div id="fb"><a href="https://www.facebook.com/dialog/feed?app_id=184683071273&link=http%3A%2F%2Flap5rentacar.me%20&picture=http%3A%2F%2Fawesomists.com%2Fyazad%2FLap5_Final_logoRGB-original_400_82.png&name=Lap5%20Rent%20A%20Car%20&caption=%20&description=I'm%20using%20Lap%205%20Rent%20A%20Car..%20It's%20smooth%2C%20easy%2C%20awesome!%20No%20charge%20to%20cancel!%20Try%20it!%20&redirect_uri=http%3A%2F%2Fwww.facebook.com%2F" target="_blank"><img src="image/fb.svg"></a></div>
+        <div id="google"><a href="https://plus.google.com/share?url=I'm%20using%20Lap%205%20Rent%20A%20Car.%20It's%20smooth,%20easy,%20awesome!%20No%20charge%20to%20cancel!%20Try%20it!.%20%20lap5rentacar.me" target="_blank"><img src="image/gp.svg"></a></div>
+        <div id="twitter"><a href="https://twitter.com/home?status=I'm%20using%20Lap%205%20Rent%20A%20Car.%20It's%20smooth,%20easy,%20awesome!%20No%20charge%20to%20cancel!%20Try%20it!%20.%20%0Ahttps%3A//pbs.twimg.com/media/CxyxLBxUoAAbBrH.png" target="_blank"><img src="image/tw.svg"></a></div>
+        <div id="share" data-toggle="tooltip" data-placement="bottom" data-original-title="Share the Joy" class="blue_tooltip"><img src="image/share.svg"></div>
+      </div>
+
+      <div>
+        <a href="">
+          <div class="lang_switch">
+            <div>العربية</div> 
+          </div>
+        </a>
+      </div>
       <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -86,7 +99,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><img class="img-responsive" src="image/Lap5_Final_logo_main_web.png"></a>
+            <a class="navbar-brand" href="#"><img class="img-responsive" src="image/Lap5_Final_logoRGB-original_400_82.png"></a>
           </div>
           <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
             <ul class="nav navbar-nav navbar-right">
@@ -100,9 +113,10 @@
       </nav>
       <div class="container-fluid" id="jumbo">
         <div class="row">
-          <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 trawler_col">
             <div class="trawler">
               <div id="curr_lang">
+                <p>Select your Language and Currency</p>
                 <div class="container-fluid lang_curr_select">
                   <div class="row">
                     <div class="col-md-12">
@@ -245,10 +259,13 @@
                 <div id="pls_wait">Please Wait...</div>
 
                 <style type="text/css">
+                  /*.ct-grid-unit-14-14 .ct-form-field .ct-checkbox {
+                      color: #0971b6;
+                  }
                   #ct_s1_search_button {
                       background-color: rgba(11, 98, 81, 0) !important;
                       border-color: #FFFFFF;
-                  }
+                  }*/
                 </style>
                 <noscript>YOUR BROWSER DOES NOT SUPPORT JAVASCRIPT</noscript>
               </div>
@@ -307,6 +324,11 @@
                                 switch (obj.process) {
                                   case 'start':
                                       $(".trawler").css({'padding-top':'0px'});
+                                      $(".tag_n_badge").css({'display' : 'none'});
+                                      $(".trawler_col").removeClass("col-lg-6");
+                                      $(".trawler_col").removeClass("col-md-6");
+                                      $(".trawler_col").addClass("col-lg-12");
+                                      $(".trawler_col").addClass("col-md-12");
                                       // Do something...
                                       break;
                                   case 'startavail':
@@ -344,7 +366,7 @@
                           // residenceID: 'IE',
                           theme:  {
                             primary: '#000080', // e.g #0000FF
-                            secondary: '#7fbb00', // e.g #FF0000
+                            secondary: '#000080', // e.g #FF0000
                             complimentary: '#FFFFFF' // e.g #000000 #0b6251
                           }
                         }
@@ -365,7 +387,7 @@
               </script>
             </div>
           </div>
-          <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 tag_n_badge">
             <div class="row">
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="tagline">
@@ -499,9 +521,20 @@
     <footer id="footer">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="footer_app_badge">
+              <span>
+                <img id="apple_badge" src="image/apple.svg" >
+                <img id="android_badge" src="image/gbad.png">
+              </span>
+            </div>
           </div>
-          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="copyright">
+                <p>Copyright © Media ME FZ LLC 2016-2017</p>
+            </div>
           </div>
         </div>
       </div>
