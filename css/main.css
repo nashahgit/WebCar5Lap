@@ -99,6 +99,7 @@ body::-webkit-scrollbar-thumb {
     box-shadow : rgba(0, 0, 0, 0.74902) 0px 1px 5px 0px;
     width: 100%;
     padding: 1%;
+    z-index: 1001;
 }
 .navbar>.container-fluid .navbar-brand {
     margin-left: 0px;
