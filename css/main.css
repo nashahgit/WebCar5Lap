@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
 body {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 body::-webkit-scrollbar {
     width: 1em;
@@ -95,6 +95,7 @@ body::-webkit-scrollbar-thumb {
     border-color: rgba(231, 231, 231, 0);
 }
 .navbar {
+    position: fixed;
     min-height: 50px;
     box-shadow : rgba(0, 0, 0, 0.74902) 0px 1px 5px 0px;
     width: 100%;
@@ -130,7 +131,7 @@ body::-webkit-scrollbar-thumb {
 
 .navbar ul li{
   background-color: #7fbb00 ;/* #0b0056 and #ffffff */
-  margin-right: 8px;
+  margin-right: 4px;
   border-radius: 2px;
   font-family: 'Lato', sans-serif;
   font-size: 14px;
@@ -142,6 +143,8 @@ body::-webkit-scrollbar-thumb {
   color:  #ffffff;
   padding-top: 10px;
   padding-bottom: 10px;
+  padding-right: 14px;
+  padding-left: 14px;
 }
 .navbar-default .navbar-nav>.active>a {
   color: rgb(255, 249, 249);
@@ -170,7 +173,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 4px;
   top: 100px;
   /*margin-left: 20px;*/
-  overflow-y: auto;
+  /*overflow-y: auto;*/
 }
 .trawler::-webkit-scrollbar {
     width: .8em;
@@ -236,7 +239,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 30px;
   padding: 0 50px;
   line-height: 1.5;
-  text-align: left;
+  text-align: justify;
 }
 .right_of_abtus {
   height: 100%;
@@ -540,6 +543,13 @@ body::-webkit-scrollbar-thumb {
     .app_badge {
       display: none;
     }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1024px)  { 
+    #da p{ 
+      font-size: 25px;
+    }
+
 }
 
 

@@ -71,7 +71,7 @@
 	sr.reveal('.right_of_abtus',{origin: 'bottom', distance: '100px', delay:600});
 
 	sr.reveal('.adv_head',{origin: 'bottom', distance: '100px', delay:400});
-	sr.reveal('.adv_p1',{origin: 'right', distance: '100px', delay:500});
+	// sr.reveal('.adv_p1',{origin: 'right', distance: '100px', delay:500});
 	sr.reveal('.adv_p2',{origin: 'right', distance: '100px', delay:600});
 	sr.reveal('.adv_p3',{origin: 'right', distance: '100px', delay:700});
 	sr.reveal('.adv_p4',{origin: 'right', distance: '100px', delay:800});
