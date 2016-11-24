@@ -159,7 +159,7 @@ body::-webkit-scrollbar-thumb {
 }
 #jumbo{
   height: 100vh;
-  background-image: url(../image/bg_rs.jpg);
+  background-image: url(../image/joy_ride_in_car_BG.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -167,7 +167,7 @@ body::-webkit-scrollbar-thumb {
 .trawler{
   height: 75vh;
   width: 100%;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0, 0, 128, 0.5);
   /*padding-top: 100px;*/
   position: relative;
   border-radius: 4px;
