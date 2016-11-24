@@ -72,6 +72,7 @@ body::-webkit-scrollbar-thumb {
 .blue_tooltip + .tooltip > .tooltip-inner {
   background-color: #000080;
   width: 100px;
+  font-size: 15px;
 }
 .lang_switch {
   position: fixed;
@@ -84,10 +85,9 @@ body::-webkit-scrollbar-thumb {
   padding: 5px 9px;
   /*padding-left: ;*/
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  font-family: 'Droid Arabic Kufi', serif;
-  font-size: 20px;
+  font-size: 18px;
   /*font-weight: 600;*/
-  /*font-family: 'Lato', sans-serif;*/
+  font-family: 'Lato', sans-serif;
   z-index: 9;
 }
 .navbar-default {
@@ -133,8 +133,8 @@ body::-webkit-scrollbar-thumb {
   background-color: #7fbb00 ;/* #0b0056 and #ffffff */
   margin-right: 4px;
   border-radius: 2px;
-  font-family: 'Lato', sans-serif;
-  font-size: 14px;
+  font-family: 'Droid Arabic Kufi', serif;
+  font-size: 19px;
 }
 .navbar ul li.active {
   background-color: #000080;
@@ -208,7 +208,7 @@ body::-webkit-scrollbar-thumb {
   font-weight: 600;
   text-align: center;
   color: white;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Droid Arabic Kufi', serif;
   text-shadow: 0px 0px 10px black;
 }
 .app_badge {
@@ -226,7 +226,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 54px;
   text-align: center;
   color: white;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Droid Arabic Kufi', serif;
   position: relative;
   top: 80px;
 }
@@ -235,8 +235,9 @@ body::-webkit-scrollbar-thumb {
   margin-top: 100px;
   margin-bottom: 50px;
   color: white;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 30px;
+  font-family: 'Droid Arabic Kufi', serif;
+  direction: rtl;
+  font-size: 28px;
   padding: 0 50px;
   line-height: 1.5;
   text-align: justify;
@@ -277,7 +278,8 @@ body::-webkit-scrollbar-thumb {
   font-size: 54px;
   text-align: center;
   color: white;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Droid Arabic Kufi', serif;
+  direction: rtl;
   text-shadow: 0px 0px 10px black;
   margin-top: 85px;
   /*margin-bottom: 30px;*/
@@ -290,12 +292,13 @@ body::-webkit-scrollbar-thumb {
 }
 .pros p {
   color: #2b2b2b;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Droid Arabic Kufi', serif;
+  direction: rtl;
   font-size: 25px;
-  font-weight: 600;
+  font-weight: 500;
   text-align: center;
   line-height: 1;
-  margin-bottom: 30px;
+  margin-bottom: 36px
 }
 .pros p span {
   padding: 5px 10px;
@@ -327,7 +330,8 @@ body::-webkit-scrollbar-thumb {
   font-size: 54px;
   text-align: center;
   color: white;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Droid Arabic Kufi', serif;
+  direction: rtl;
   text-shadow: 0px 0px 10px black;
   margin-top: 80px;
   margin-bottom: 40px;
@@ -434,11 +438,7 @@ body::-webkit-scrollbar-thumb {
   width: 18%;
 }
 
-@media only screen and (max-device-width: 480px) {
-
-}
-
-@media (max-width:767px) { 
+@media only screen and (max-width:767px) { 
   .navbar-brand img {
     /*margin: 0 auto;*/
     height: 85%;
@@ -496,7 +496,7 @@ body::-webkit-scrollbar-thumb {
     margin-bottom: 5px;
   }
   .pros p {
-    font-size: 20px;
+    font-size: 16px;
   }
   #da h1{
     font-size: 40px;
@@ -551,6 +551,15 @@ body::-webkit-scrollbar-thumb {
     }
 
 }
+
+@media only screen and (min-width: 350px) and (max-width: 420px) {
+  .pros p {
+    font-size: 14px;
+  }
+}
+
+
+
 
 
 
