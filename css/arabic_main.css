@@ -173,7 +173,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 4px;
   top: 100px;
   /*margin-left: 20px;*/
-  /*overflow-y: auto;*/
+  overflow-y: auto;
 }
 .trawler::-webkit-scrollbar {
     width: .8em;
