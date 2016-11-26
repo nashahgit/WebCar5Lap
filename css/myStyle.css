@@ -239,3 +239,12 @@
       #ui-datepicker-div {
         left: 0px !important;
       }
+      #ct_no_cars>.ct-palette-p-color {
+        color: #ffffff !important;
+      }
+      #ct_s1_pickup_time option {
+        color: #000000;
+      }
+      #ct_s1_dropoff_time option {
+        color: #000000;
+      }
