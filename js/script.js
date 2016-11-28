@@ -1,11 +1,12 @@
 ﻿$(document).ready(function(){ 
 
 	 $(function(){ 
-	     var navMain = $("#navbar");
-	     navMain.on("click", "a", function () {
-	         $(".navbar-toggle").collapse('hide');
+	     $(".navbar-nav li a").on("click",function () {
+	         // $(".navbar-collapse.in").collapse('hide');
+	         $(".navbar-collapse").removeClass("in");
 	     });
 	 });
+
 
 	 /* For tool tip */
 	 $('[data-toggle="tooltip"]').tooltip(); 
